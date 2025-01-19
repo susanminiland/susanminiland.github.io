@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拜年文案生成器</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>拜年文案生成器</h1>
+      <h2>快速生成創意新年祝福語</h2>
+      <p>為家人、朋友、同事送上最貼心的新年祝福！</p>
+    </header>
+
+    <main>
+      <div class="category-selector">
+        <button class="category active" data-category="family">家庭祝福</button>
+        <button class="category" data-category="friend">朋友祝福</button>
+        <button class="category" data-category="business">商務祝福</button>
+        <button class="category" data-category="humor">幽默祝福</button>
+      </div>
+
+      <div class="generator-box">
+        <button id="generate-btn">生成祝福語</button>
+        <div class="result-box">
+          <p id="result-text"></p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>點擊按鈕，獲取專屬新年祝福語。</p>
+      <p id="countdown"></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
