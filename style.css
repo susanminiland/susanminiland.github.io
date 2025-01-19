@@ -1,0 +1,149 @@
+/* 基本設定 */
+:root {
+  --primary-color: #B22222;
+  --secondary-color: #FFD700;
+  --text-color: #FFFFFF;
+  --result-bg: rgba(255, 250, 205, 0.8);
+}
+
+/* 字體設定 */
+@font-face {
+  font-family: 'Kaiti SC';
+  src: local('Kaiti SC'), local('STKaiti');
+}
+
+@font-face {
+  font-family: 'PingFang SC';
+  src: local('PingFang SC'), local('PingFang');
+}
+
+body {
+  font-family: 'PingFang SC', sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* 標題區 */
+header h1 {
+  font-family: 'Kaiti SC', serif;
+  font-size: 20vw;
+  margin: 0;
+}
+
+header h2 {
+  font-size: 3vw;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+header p {
+  font-size: 2.5vw;
+  margin: 5px 0;
+}
+
+/* 分類選擇 */
+.category-selector {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.category {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category.active {
+  border-color: var(--primary-color);
+}
+
+/* 生成區域 */
+.generator-box {
+  margin: 30px 0;
+}
+
+#generate-btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#generate-btn:hover {
+  background: linear-gradient(to right, #FFA500, #FFD700);
+}
+
+#generate-btn:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.result-box {
+  background-color: var(--result-bg);
+  border: 2px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#result-text {
+  font-size: 2vw;
+  color: #000;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+/* 底部區域 */
+footer {
+  margin-top: 30px;
+}
+
+footer p {
+  font-family: 'Kaiti SC', serif;
+  font-size: 1.5vw;
+  margin: 5px 0;
+}
+
+/* 動畫效果 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleUp {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
